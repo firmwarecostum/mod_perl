@@ -1883,7 +1883,6 @@ EOI
         $install .= <<'EOI';
 # install mod_perl.so
 	@$(MKPATH) $(DESTDIR)$(MODPERL_AP_LIBEXECDIR)
-	$(MODPERL_TEST_F) $(MODPERL_LIB_DSO) && \
 	$(MODPERL_CP) $(MODPERL_LIB_DSO) $(DESTDIR)$(MODPERL_AP_LIBEXECDIR)
 EOI
     }
@@ -1932,7 +1931,6 @@ EOI
         $install .= <<'EOI';
 # install mod_perl symbol file
 	@$(MKPATH) $(MODPERL_AP_LIBEXECDIR)
-	$(MODPERL_TEST_F) $(MODPERL_LIB_SYMBOLS) && \
 	$(MODPERL_CP) $(MODPERL_LIB_SYMBOLS) $(MODPERL_AP_LIBEXECDIR)
 EOI
     }
@@ -1953,7 +1951,6 @@ EOI
         $install .= <<'EOI';
 # install mod_perl.lib
 	@$(MKPATH) $(MODPERL_AP_LIBDIR)
-	$(MODPERL_TEST_F) $(MODPERL_LIB_LOCATION) && \
 	$(MODPERL_CP) $(MODPERL_LIB_LOCATION) $(MODPERL_AP_LIBDIR)
 EOI
     }
